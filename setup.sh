@@ -1,6 +1,6 @@
 # update and install git and vim
 sudo apt-get update
-sudo apt-get install git vim
+sudo apt-get install git vim curl
 
 # install pathogen
 mkdir -p ~/.vim/autoload/ ~/.vim/bundle
@@ -28,6 +28,9 @@ git config --global user.email "jon@waltzhome.com"
 # set vim as default editor
 # WARNING: command is specific to Debian-based systems
 sudo update-alternative --config editor
+
+# enable 256-colors terminal for distinguished colorscheme
+export TERM=xterm-256
 
 # install vim plugins with vundle
 vim +PluginInstall +qall
